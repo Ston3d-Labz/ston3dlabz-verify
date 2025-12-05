@@ -1,1 +1,19 @@
+{
+    "designs": {
+        "Astronaut": {
+            "edition_size": 420,
+            "plates": {
+                "ASTRO-001": { "number": 1, "status": "valid" },
+                "ASTRO-420": { "number": 420, "status": "valid" }
+            }
+        },
+        "Medusa": {
+            "edition_size": 420,
+            "plates": {
+                "MEDU-001": { "number": 1, "status": "valid" },
+                "MEDU-013": { "number": 13, "status": "valid" }
+            }
+        }
+    }
+}
 
