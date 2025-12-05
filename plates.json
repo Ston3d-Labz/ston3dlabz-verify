@@ -1,6 +1,6 @@
 {
     "designs": {
-        "1_Astronaut": {
+        "Astronaut": {
             "collection": "Space",
             "edition_size": 420,
             "plates": {
