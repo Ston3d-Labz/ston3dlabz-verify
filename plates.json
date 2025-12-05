@@ -1,6 +1,7 @@
 {
     "designs": {
-        "Astronaut": {
+        "1_Astronaut": {
+            "collection": "Space"
             "edition_size": 420,
             "plates": {
                 "ASTRO-001": { "number": 1, "status": "valid" },
@@ -9,6 +10,7 @@
         },
         
           "Rick-Roll": {
+            "collection": "Memes"
             "edition_size": 420,
             "plates": {
                 "53:6A:26:93:02:00:01": { "number": 1, "status": "valid" },
@@ -17,6 +19,7 @@
         },
         
         "Medusa": {
+            "collection": "Space"
             "edition_size": 420,
             "plates": {
                 "MEDU-001": { "number": 1, "status": "valid" },
