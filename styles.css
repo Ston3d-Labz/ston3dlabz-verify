@@ -32,7 +32,7 @@ input {
 button {
     margin-top: 15px;
     padding: 12px 26px;
-    background: #21ff94;
+    background: #19e67a;
     color: #000;
     border: none;
     border-radius: 8px;
@@ -43,6 +43,7 @@ button {
 }
 
 button:hover {
+    background: #21ff94;
     transform: translateY(-2px);
     filter: drop-shadow(0 0 6px #21ff94);
 }
