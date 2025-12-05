@@ -17,13 +17,15 @@ async function loadPlates() {
             for (const [designName, designObj] of Object.entries(data.designs)) {
                 const editionSize = designObj.edition_size || 420;
                 const plates = designObj.plates || {};
+                const collection = designObj.collection || null; // NEU
 
                 for (const [chipId, plateInfo] of Object.entries(plates)) {
                     plateIndex[chipId] = {
                         design: designName,
                         number: plateInfo.number,
                         edition_size: editionSize,
-                        status: plateInfo.status || "valid"
+                        status: plateInfo.status || "valid",
+                        collection: collection // NEU
                     };
                 }
             }
@@ -60,11 +62,18 @@ function verify() {
     const entry = plateIndex[input];
 
     if (entry) {
+        // Falls keine Kollektion gesetzt ist, lassen wir die Zeile einfach weg
+        const collectionLine = entry.collection
+            ? `<br>Kollektion: ${entry.collection}`
+            : "";
+
         resultBox.innerHTML =
             `✔ Original Plate<br>
              Design: ${entry.design}<br>
-             Nummer: ${entry.number} / ${entry.edition_size}<br>
-             Status: ${entry.status}`;
+             Nummer: ${entry.number} / ${entry.edition_size}` +
+             collectionLine +
+            `<br>Status: ${entry.status}`;
+
         resultBox.style.color = "#21ff94";
     } else {
         resultBox.innerHTML = "✘ Nicht registriert";
